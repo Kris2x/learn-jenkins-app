@@ -19,6 +19,9 @@ pipeline {
           ls -al
         '''
       }
+      steps('Test') {
+        sh 'test -f build/index.html'
+      }
     }
   }
 }
